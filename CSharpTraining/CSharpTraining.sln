@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTraining", "CSharpTraining\CSharpTraining.csproj", "{B2956ADD-A9D3-4061-B28F-A6793AE8CD23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpTraining", "CSharpTraining\CSharpTraining.csproj", "{B2956ADD-A9D3-4061-B28F-A6793AE8CD23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTestProject", "SampleTestProject\SampleTestProject.csproj", "{DC721066-86A5-455D-AC95-6A38C9ABFA4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestProject", "SampleTestProject\SampleTestProject.csproj", "{DC721066-86A5-455D-AC95-6A38C9ABFA4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suvarna", "suvarna\suvarna.csproj", "{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DC721066-86A5-455D-AC95-6A38C9ABFA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC721066-86A5-455D-AC95-6A38C9ABFA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC721066-86A5-455D-AC95-6A38C9ABFA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

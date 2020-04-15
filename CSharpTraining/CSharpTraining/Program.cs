@@ -1,4 +1,5 @@
 ﻿using CSharpTraining.Arrays;
+using CSharpTraining.ClassAndObjects;
 using CSharpTraining.Conditions;
 using CSharpTraining.Inheritance;
 using CSharpTraining.Loops;
@@ -18,6 +19,21 @@ namespace CSharpTraining
         {
             Program p = new Program();
             p.BaseClassMethod();
+
+            //Classes and Object
+            Fruit mango = new Fruit();
+            Console.WriteLine("Name:" + mango.name + "\tColor:" + mango.color + "\tTaste:" + mango.taste);
+            mango.name = "Mango";
+            mango.color = "Yello";
+            mango.taste = "sweet";
+            Console.WriteLine("Name:" + mango.name + "\tColor:" + mango.color + "\tTaste:" + mango.taste);
+            Fruit orange = new Fruit("Orange", "Soar", "Orange");
+            Console.WriteLine("Name:" + orange.name + "\tColor:" + orange.color + "\tTaste:" + orange.taste);
+
+            //Access specifiers
+            PPPInheritance ppp = new PPPInheritance();
+            PrivateAndProtected pnp = new PrivateAndProtected();
+            int a = pnp.publicVariabel;
 
             //Method overloading
             MethodOverLoading mol = new MethodOverLoading();

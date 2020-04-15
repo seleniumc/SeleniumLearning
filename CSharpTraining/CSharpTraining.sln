@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpTraining", "CSharpTraining\CSharpTraining.csproj", "{B2956ADD-A9D3-4061-B28F-A6793AE8CD23}"
 EndProject
+
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suvarna", "suvarna\suvarna.csproj", "{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestProject", "SampleTestProject\SampleTestProject.csproj", "{DC721066-86A5-455D-AC95-6A38C9ABFA4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suvarna", "suvarna\suvarna.csproj", "{A485AFE4-28C9-4B43-9C1E-E904F773CFDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practicework", "Practicework\Practicework.csproj", "{AE1A4981-3AE0-40D6-80DC-EA99AFC2CBF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

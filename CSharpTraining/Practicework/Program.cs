@@ -7,6 +7,7 @@ using Practicework.Conditions;
 using Practicework.Inheritance;
 using Practicework.Arrays;
 using Practicework.foreac;
+using Practicework.Methods;
 
 namespace Practicework
 {
@@ -69,8 +70,19 @@ namespace Practicework
             fe.foreachmethod();
             Console.WriteLine(fe);
 
-
-
+            Console.WriteLine("Methods");
+            MethodsModels mm = new MethodsModels();            
+            MethodsModels mm1 = new MethodsModels(1,2);         
+            MethodsModels mm2 = new MethodsModels(1,2);
+            int i1 = mm1.Intmethod();
+            string s1 = mm2.stringmethod("d");
+            int i2 = MethodsModels.simpleadd(4,2);
+            int i3 = mm1.stringmethod(3,"n",4);
+            Console.WriteLine(i3);
+            Console.WriteLine(i2);
+            Console.WriteLine(s1);
+            Console.WriteLine(i1);
+            mm.Myname();
         }
     }
 

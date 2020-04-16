@@ -1,6 +1,7 @@
 ﻿using CSharpTraining.Arrays;
 using CSharpTraining.ClassAndObjects;
 using CSharpTraining.Conditions;
+using CSharpTraining.Files;
 using CSharpTraining.Inheritance;
 using CSharpTraining.Loops;
 using CSharpTraining.Methods;
@@ -10,6 +11,7 @@ using CSharpTraining.StaticAndObjectVariables;
 using CSharpTraining.Strings;
 using CSharpTraining.Variables;
 using System;
+using System.IO;
 
 namespace CSharpTraining
 {
@@ -17,6 +19,55 @@ namespace CSharpTraining
     {
         static void Main(string[] args)
         {
+            //Singleton sample
+            SingletonSample sgs = SingletonSample.CreateSingletonObject();
+            SingletonSample sgs1 = SingletonSample.CreateSingletonObject();
+            FileSamples fs1 = new FileSamples();
+            FileSamples fs2 = new FileSamples();
+
+            Console.WriteLine(sgs.GetHashCode()+"\t"+sgs1.GetHashCode());
+            Console.WriteLine(fs1.GetHashCode() + "\t" + fs2.GetHashCode());
+            //File Samples
+            FileSamples fs = new FileSamples();
+            fs.WriteTextToFile("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt", "Hello");
+            fs.AppendToFile("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt", "\nAppending");
+            string[] fileLines = fs.ReadAllLines("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt");
+            string fileContent = fs.ReadAllText("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt");
+            try
+            {
+                File.Copy("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt", "C:\\Users\\v-mukri\\Desktop\\SampleFiles\\2.txt");
+            }
+            catch (System.IO.IOException e)
+            {
+                Console.WriteLine(e.GetType());
+                if (e.Message.Contains("already exists"))
+                    Console.WriteLine("Please choose a different file name");
+                try
+                {
+                    throw new ArithmeticException();
+                }
+                catch
+                {
+                    Console.WriteLine("We have never dealt with this kind of exception, we are investigating into it, Arithmetic");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("We have never dealt with this kind of exception, we are investigating into it");
+            }
+            finally
+            {
+                Console.WriteLine("Mandatory code to be executed");
+            }
+            File.Delete("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt");
+            File.Delete("C:\\Users\\v-mukri\\Desktop\\SampleFiles\\1.txt");
+            foreach (string samplestring in fileLines)
+            {
+                Console.WriteLine(samplestring);
+            }
+            Console.WriteLine(fileContent);
+
             Program p = new Program();
             p.BaseClassMethod();
 
@@ -55,7 +106,7 @@ namespace CSharpTraining
             //Operators sample
             OperatorsSample os = new OperatorsSample();
             os.Modulus(4, 3);
-            int a = 10;
+            a = 10;
             a %= 5;
             Console.WriteLine(a);
             Console.WriteLine(os.IfAGreaterThanB(1, 6));

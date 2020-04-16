@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpTraining.Enums;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -50,6 +51,19 @@ namespace CSharpTraining.Conditions
                 default:
                     Console.WriteLine("Enter valid number");
                     break;
+            }
+            EnumSample.Color j = new EnumSample.Color();
+            if(j==EnumSample.Color.Green)
+            {
+
+            }
+            else if(j==EnumSample.Color.Black)
+            {
+
+            }
+            else
+            {
+
             }
         }
 

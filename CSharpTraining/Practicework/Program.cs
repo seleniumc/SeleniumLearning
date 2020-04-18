@@ -8,6 +8,7 @@ using Practicework.Inheritance;
 using Practicework.Arrays;
 using Practicework.foreac;
 using Practicework.Methods;
+using Practicework.ClassandObjects;
 
 namespace Practicework
 {
@@ -16,7 +17,8 @@ namespace Practicework
     {
         static void Main(string[] args)
         {
-           
+      
+
 
            /* String s = "      This is radha,pkkondi,kalluru    ";
            
@@ -83,6 +85,20 @@ namespace Practicework
             Console.WriteLine(s1);
             Console.WriteLine(i1);
             mm.Myname();
+
+
+            Console.WriteLine("getandsetmethods");
+            GetandSet gs = new GetandSet();
+            gs.name = "ramu";
+            gs.number = 10;
+            gs.currency = 20.5;
+            gs.bignumber = 382936686767789;
+            gs.fname = "john";
+            gs.cname = 'A';
+            Console.WriteLine("name:" + gs.name + "\tnumber:" + gs.number + "\tcurrency:" + gs.currency + "\tbignumber:" + gs.bignumber + "\tfname:" + gs.fname + "\tcname:" + gs.cname);
+            GetandSet ramesh = new GetandSet("Anu",5,4.5,5666778,"ramarao",'m');
+            Console.WriteLine("name:" + ramesh.name + "\tnumber:" + ramesh.number + "\tcurrency:" + ramesh.currency + "\tbignumber:" + ramesh.bignumber + "\tfname:" + ramesh.fname + "\tcname:" + gs.cname);
+
         }
     }
 

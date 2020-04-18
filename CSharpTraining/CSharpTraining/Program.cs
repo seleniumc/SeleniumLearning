@@ -145,6 +145,8 @@ namespace CSharpTraining
             Console.WriteLine("Object2 variable value is " + stcObj1.b);
             stcObj.ContinueAndBreak();
 
+ 
+
 
             //ArraySamples
             new ArraySamples().ArraySamplesMethod();

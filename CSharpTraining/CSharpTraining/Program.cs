@@ -1,5 +1,6 @@
 ﻿using CSharpTraining.Arrays;
 using CSharpTraining.ClassAndObjects;
+using CSharpTraining.Collection;
 using CSharpTraining.Conditions;
 using CSharpTraining.Files;
 using CSharpTraining.Inheritance;
@@ -11,6 +12,7 @@ using CSharpTraining.StaticAndObjectVariables;
 using CSharpTraining.Strings;
 using CSharpTraining.Variables;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace CSharpTraining
@@ -19,13 +21,28 @@ namespace CSharpTraining
     {
         static void Main(string[] args)
         {
+            //Collections sample
+            
+            CollectionSample cse = new CollectionSample();
+            Console.WriteLine(cse.Factorial(5)+"\t"+cse.FactorialRecursion(5));
+            Dictionary<int,string> dic=  cse.GetNameAndNumbers();
+            foreach(int key in dic.Keys)
+            {
+                Console.WriteLine(dic[key]);
+            }
+            Console.WriteLine("Please enter the number till which you want prime numbers");
+            
+            List<int> pn = cse.GetPrimeNumbers(Convert.ToInt32(Console.ReadLine()));
+            foreach (int primeNumber in pn)
+                Console.WriteLine(primeNumber);
+            
             //Singleton sample
             SingletonSample sgs = SingletonSample.CreateSingletonObject();
             SingletonSample sgs1 = SingletonSample.CreateSingletonObject();
             FileSamples fs1 = new FileSamples();
             FileSamples fs2 = new FileSamples();
 
-            Console.WriteLine(sgs.GetHashCode()+"\t"+sgs1.GetHashCode());
+            Console.WriteLine(sgs.GetHashCode() + "\t" + sgs1.GetHashCode());
             Console.WriteLine(fs1.GetHashCode() + "\t" + fs2.GetHashCode());
             //File Samples
             FileSamples fs = new FileSamples();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using suvarna.Methods;
+using System;
 
 namespace suvarna
 {
@@ -14,7 +15,13 @@ namespace suvarna
             Console.WriteLine(myNum);
             string myText = "Hello";
             Console.WriteLine(myText);
+            MethodSamples ms = new MethodSamples();
+
+            ms.SimpleMethod();
+            ms.SimpleIntMethod();
+            int a1 = ms.SimpleIntMethod();
 
         }
+       
     }
 }

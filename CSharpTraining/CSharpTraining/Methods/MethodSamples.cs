@@ -26,7 +26,8 @@ namespace CSharpTraining.Methods
 
         public static void Sample()
         {
-            SimpleAdd(4,1);
+            Console.WriteLine("Sample Method");
+
         }
 
         public string SimpleStringMethod(string a)

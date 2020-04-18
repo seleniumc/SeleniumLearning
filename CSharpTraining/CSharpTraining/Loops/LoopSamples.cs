@@ -16,6 +16,9 @@ namespace CSharpTraining.Loops
             }
             for (counter = 0; counter <= 5; counter++)
                 Console.WriteLine("For loop");
+            int[] a = { 1,2,3,4};
+            foreach (int b in a)
+                Console.WriteLine(b);
         }
     }
 }

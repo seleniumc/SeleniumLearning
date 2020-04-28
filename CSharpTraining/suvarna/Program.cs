@@ -1,6 +1,8 @@
-﻿using suvarna.files;
+﻿using suvarna.Collections;
+using suvarna.files;
 using suvarna.Methods;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace suvarna
@@ -9,6 +11,20 @@ namespace suvarna
     {
         static void Main(string[] args)
         {
+            //Collection Samples
+            CollectionSamples cs = new CollectionSamples();
+            Console.WriteLine("How many fibonacci series you need");
+            List<int> fb = cs.GetFibonacci(Convert.ToInt32(Console.ReadLine()));
+            foreach (int Fibonacci in fb)
+                Console.WriteLine(Fibonacci);
+            Console.WriteLine("How many Evennumbers you need");
+            List<List<int>> en = cs.GetEvennumber(Convert.ToInt32(Console.ReadLine()));
+            foreach (List<int> a in en)
+                foreach (int Evennumber in a)
+                    Console.WriteLine(Evennumber);
+            
+
+
             //File Samples
             FileSamples fs = new FileSamples();
             fs.WriteTextToFile("C:\\Users\\bcmss\\Desktop\\SampleFiles\\1.txt", "Hello");

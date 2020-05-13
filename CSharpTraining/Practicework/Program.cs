@@ -8,6 +8,9 @@ using Practicework.Inheritance;
 using Practicework.Arrays;
 using Practicework.foreac;
 using Practicework.Methods;
+using Practicework.ClassandObjects;
+using Practicework.Collections;
+using System.Collections.Generic;
 
 namespace Practicework
 {
@@ -16,15 +19,21 @@ namespace Practicework
     {
         static void Main(string[] args)
         {
-           
 
-           /* String s = "      This is radha,pkkondi,kalluru    ";
-           
-           
-                Console.WriteLine("the string is" + s.Trim());
-                Console.WriteLine("the string result is" + s.ToLower());
-                Console.WriteLine("the string result is" + s.Substring(2, 5));
-            Console.WriteLine("the string result is" + s.Remove(15));*/
+            Collectionexample cse = new Collectionexample();
+            Console.WriteLine("Please enter the even number");
+            List<int> pd = cse.GetNumbers(Convert.ToInt32(Console.ReadLine()));
+            foreach (int Number in pd)
+                Console.WriteLine(Number);
+            Console.WriteLine("the reverse number is:\t"+cse.ReverseOrder(58)) ;  
+
+            /* String s = "      This is radha,pkkondi,kalluru    ";
+
+
+                 Console.WriteLine("the string is" + s.Trim());
+                 Console.WriteLine("the string result is" + s.ToLower());
+                 Console.WriteLine("the string result is" + s.Substring(2, 5));
+             Console.WriteLine("the string result is" + s.Remove(15));*/
             Console.WriteLine("integer values");
           
             int a = 10, b = 15;
@@ -83,6 +92,24 @@ namespace Practicework
             Console.WriteLine(s1);
             Console.WriteLine(i1);
             mm.Myname();
+
+
+            Console.WriteLine("getandsetmethods");
+            GetandSet gs = new GetandSet();
+            gs.name = "ramu";
+            gs.number = 10;
+            gs.currency = 20.5;
+            gs.bignumber = 382936686767789;
+            gs.fname = "john";
+            gs.cname = 'A';
+            Console.WriteLine("name:" + gs.name + "\tnumber:" + gs.number + "\tcurrency:" + gs.currency + "\tbignumber:" + gs.bignumber + "\tfname:" + gs.fname + "\tcname:" + gs.cname);
+            GetandSet ramesh = new GetandSet("Anu",5,4.5,5666778,"ramarao",'m');
+            Console.WriteLine("name:" + ramesh.name + "\tnumber:" + ramesh.number + "\tcurrency:" + ramesh.currency + "\tbignumber:" + ramesh.bignumber + "\tfname:" + ramesh.fname + "\tcname:" + gs.cname);
+
+            //collections
+           // Collectionexample ce = new Collectionexample();
+            //ce.ReverseOrder();
+            //Console.WriteLine(ce);
         }
     }
 

@@ -26,6 +26,8 @@ namespace Practicework.foreac
 
             foreach (int k in n)
                 Console.WriteLine(k);
+            //foreach (string s in m)
+              //  Console.WriteLine(s);
             
         }
     }

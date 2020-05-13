@@ -1,8 +1,10 @@
 ﻿using Laxmi.Arrays;
+using Laxmi.Collectionss;
 using Laxmi.Condtions;
 using Laxmi.Swichs;
 using Laxmi.While;
 using System;
+using System.Collections.Generic;
 
 namespace Laxmi
 {
@@ -29,7 +31,15 @@ namespace Laxmi
             WhileIteration wi = new WhileIteration();
 
                 wi.MainMenu();
-            
+            //Colletion
+            SampleCollection cse = new SampleCollection();
+            Console.WriteLine("Please enter the number till which you want prime numbers");
+            List<int> pn = cse.GetPrimeNumbers(Convert.ToInt32(Console.ReadLine()));
+            foreach (int primeNumber in pn)
+                Console.WriteLine(primeNumber);
+            SampleCollection ps = new SampleCollection();
+            ps.GetNumbers();
+            Console.WriteLine();
 
 
         }

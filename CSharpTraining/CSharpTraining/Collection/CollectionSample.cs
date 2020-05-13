@@ -58,7 +58,7 @@ namespace CSharpTraining.Collection
             long factorial = 1;
 
             for (int i = number; i > 0; i--)
-                factorial = factorial * i;
+                factorial *= i;
 
             return factorial;
         }
@@ -71,4 +71,4 @@ namespace CSharpTraining.Collection
             return output;
         }
     }
-}
+}   

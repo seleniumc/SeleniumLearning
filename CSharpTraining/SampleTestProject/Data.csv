@@ -1,4 +1,3 @@
-﻿username,password,role
-murali,123,admin
-radha,345,designer
-lakshmi,323,developer
+﻿murali,123,admin,1
+radha,345,designer,2
+lakshmi,323,developer,3

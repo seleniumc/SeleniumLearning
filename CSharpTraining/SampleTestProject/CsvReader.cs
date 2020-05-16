@@ -11,7 +11,9 @@ namespace SampleTestProject
 
         public CsvReader(string path)
         {
+            Console.WriteLine("FilePath is" + Path.GetFullPath(path));
             if (!File.Exists(path)) throw new InvalidOperationException("path does not exist");
+            Console.WriteLine("FilePath is"+Path.GetFullPath(path));
             this.path = path;
             Initialize();
         }

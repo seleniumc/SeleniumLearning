@@ -37,8 +37,42 @@ namespace Practicework.Collections
                 return sum;
               
             }
-            
-           
+        public List<int> oddnumber(int number)
+        {
+            List<int>num=new List<int>();
+           /* Console.WriteLine("odd number");
+            number = Convert.ToInt32(Console.ReadLine());*/
+            for (int m = 1; m < number; m++)
+            {
+                if (m % 2 != 0)
+                {
+
+                    num.Add(m);
+                }
+            }
+
+
+            return num;
+
+
+        }
+       public Dictionary<int,string>GetNameAndnumbers()
+        {
+            Dictionary<int, string> dist = new Dictionary<int, string>();
+            try
+            {
+                dist.Add(1,"Hi");
+                dist.Add(2,"Hello");
+                dist.Add(3,"Ram");
+                dist.Add(4,"Ram");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message+e.GetType());
+            }
+            return dist;
+        }
+
         }
     
 }

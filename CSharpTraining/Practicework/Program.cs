@@ -25,7 +25,19 @@ namespace Practicework
             List<int> pd = cse.GetNumbers(Convert.ToInt32(Console.ReadLine()));
             foreach (int Number in pd)
                 Console.WriteLine(Number);
-            Console.WriteLine("the reverse number is:\t"+cse.ReverseOrder(58)) ;  
+            Console.WriteLine("the reverse number is:\t"+cse.ReverseOrder(58)) ;
+            Console.WriteLine("the odd numbers are");
+            List<int> pn = cse.oddnumber(Convert.ToInt32(Console.ReadLine()));
+            foreach (int Number in pn)
+                Console.WriteLine(Number);
+
+            Dictionary<int, string> dic = cse.GetNameAndnumbers();
+            foreach (int key in dic.Keys)
+            {
+                Console.WriteLine(dic[key]);
+            }
+
+
 
             /* String s = "      This is radha,pkkondi,kalluru    ";
 

@@ -11,7 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleTestProject", "Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practicework", "Practicework\Practicework.csproj", "{AE1A4981-3AE0-40D6-80DC-EA99AFC2CBF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laxmi", "Laxmi\Laxmi.csproj", "{04A73B23-2F5D-4A1C-ADB6-924FEDD421ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laxmi", "Laxmi\Laxmi.csproj", "{04A73B23-2F5D-4A1C-ADB6-924FEDD421ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDD5632E-7264-4159-B838-04D8CB7DACD7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumNunitSampleProject", "SeleniumNunitSampleProject\SeleniumNunitSampleProject.csproj", "{6E50D2D2-93CD-4AB0-AC39-9C0E667C5577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +46,10 @@ Global
 		{04A73B23-2F5D-4A1C-ADB6-924FEDD421ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A73B23-2F5D-4A1C-ADB6-924FEDD421ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A73B23-2F5D-4A1C-ADB6-924FEDD421ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E50D2D2-93CD-4AB0-AC39-9C0E667C5577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E50D2D2-93CD-4AB0-AC39-9C0E667C5577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E50D2D2-93CD-4AB0-AC39-9C0E667C5577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E50D2D2-93CD-4AB0-AC39-9C0E667C5577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

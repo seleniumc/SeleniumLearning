@@ -21,7 +21,7 @@ namespace Testproject
             this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
-        public void loginpage()
+        public void Login(string user, string pwd)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(signinlnk)).Click();
             wait.Until(ExpectedConditions.ElementToBeClickable(usernamtxt)).SendKeys("radha563@outlook.com");

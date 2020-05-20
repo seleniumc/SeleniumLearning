@@ -21,7 +21,7 @@ namespace SeleniumNunitSampleProject.TestMethods
         }
 
         [Test, TestCaseSource("GetSendMailDataFromCsv")]
-        public void TestSendMail(string user, string pwd, string toem, string sub, string bdy)
+        public void TestSendMail(string user, string pwd, string toem, string sub, string bdy, string txt)
         {
             loginPage = new LoginPage(driver);
             homePage = new HomePage(driver);
@@ -43,14 +43,15 @@ namespace SeleniumNunitSampleProject.TestMethods
                 string toEmail = reader[2];
                 string subject = reader[3];
                 string body = reader[4];
-                yield return new string[] { userName, password, toEmail, subject, body };
+                string test = reader[5];
+                yield return new string[] { userName, password, toEmail, subject, body, test };
             }
         }
 
         [TearDown]
         public void Destroy()
         {
-            Thread.Sleep(10000);
+            Thread.Sleep(3000);
             driver.Close();
             driver.Quit();
         }

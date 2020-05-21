@@ -15,6 +15,8 @@ namespace Testproject.PageObject
         By bodyTxt = By.XPath("//div[@aria-label='Message body']");
         By sendBtn = By.XPath("//span[text()='Send']");
         By selectallmsgs = By.XPath("//div[@aria-label='Select all messages']");
+        By markalread = By.Id("id__774");
+        By delet = By.ClassName("ms - Button - label label - 70");
         private IWebDriver loginDriver;
         private WebDriverWait wait;
         public HomPage(IWebDriver driver)
@@ -30,7 +32,9 @@ namespace Testproject.PageObject
             wait.Until(ele => ele.FindElement(subjectTxt)).SendKeys(subject);
             wait.Until(ele => ele.FindElement(bodyTxt)).SendKeys(body);
             wait.Until(ele => ele.FindElement(sendBtn)).Click();
-            wait.GetHashCode = ElementClickInterceptedException(selectallmsgs);
+            wait.GetHashCode(ElementClickInterceptedException(selectallmsgs));
+            wait.Until(ele => ele.FindElement(markalread)).Click();
+            wait.Until(ele => ele.FindElement(delet)).Click();
         }
     }
 }

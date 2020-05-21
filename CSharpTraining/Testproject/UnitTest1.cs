@@ -5,6 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using SampleTestProject;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace Testproject
@@ -31,7 +32,7 @@ namespace Testproject
             lginpage.Login(user,pwd);
             homepage.SendMail(toem,sub,bdy,txt);
         }
-        private static System.Collections.Generic.IEnumerable<IEquatable<string[]>> GetSendMailDataFromCsv()
+        private static IEnumerable<string[]> GetSendMailDataFromCsv()
         {
             CsvReader reader = new CsvReader("Data/SendMail.Csv");
             while(reader.Next())

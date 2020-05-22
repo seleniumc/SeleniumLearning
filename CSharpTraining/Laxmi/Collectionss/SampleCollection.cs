@@ -40,16 +40,8 @@ namespace Laxmi.Collectionss
             return primberNumber;
         }
 
-        internal void GetNumbers()
-        {
-            throw new NotImplementedException();
-        }
 
-        //
-        /// internal List<int> GetPrimeNumbers(long v)
-
-        //  throw new NotImplementedException();
-        public List<int> GetNumbers(int bello )
+        public List<int> GetNumbers(int bello, string typeofNumbers)
         {
             List<int> myrNumber = new List<int>();
             int m = 0;
@@ -57,28 +49,59 @@ namespace Laxmi.Collectionss
 
             for (m = 1; m < bello; m++)
             {
-                if (m % 2 == 0)
-                {
-                    Console.WriteLine(m + " ");
-                    myrNumber.Add(m);
+                if (typeofNumbers.Equals("even"))
 
+                {
+                    if (m % 2 == 0)
+                    {
+                        // Console.WriteLine(m + " ");
+                        myrNumber.Add(m);
+
+                    }
 
                 }
-                Console.WriteLine("Odd Number");
-
-                for (m = 1; m < bello; m++)
+                else
                 {
+
                     if (m % 2 != 0)
                     {
-                        Console.WriteLine(m + " ");
+                        // Console.WriteLine(m + " ");
                         myrNumber.Add(m);
                     }
+
                 }
-                //  return myrNumber;
+
             }
 
             return myrNumber;
         }
+          public List<int> GetSumofNumbers()
+        {
+            List<int> sumofNumbers = new List<int>();
+            int k, n, sum = 0;
+                double avg;
+
+                Console.Write("\n\n");
+                Console.Write("Read 10 numbers and calculate sum and average:\n");
+                Console.Write("----------------------------------------------");
+                Console.Write("\n\n");
+
+                Console.Write("Input the 10 numbers : \n");
+                for (k = 1; k <= 10; k++)
+                {
+                    Console.Write("Number-{0} :", i);
+
+                    n = Convert.ToInt32(Console.ReadLine());
+                    sum += n;
+                sumofNumbers.Add(k);
+
+                }
+                avg = sum / 10.0;
+                Console.Write("The sum of 10 no is : {0}\nThe Average is : {1}\n", sum, avg);
+        }
+        
     }
+              return sumofNumbers;
+           
 }
 

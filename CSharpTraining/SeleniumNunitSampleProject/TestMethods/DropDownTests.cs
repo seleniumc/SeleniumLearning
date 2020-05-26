@@ -1,7 +1,11 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
+using SampleTestProject;
 using SeleniumNunitSampleProject.Pages;
+using SeleniumNunitSampleProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,34 +19,40 @@ namespace SeleniumNunitSampleProject.TestMethods
     {
         IWebDriver driver;
         Guru99DropDownSample guru99Page;
-        [SetUp]
-        public void Setup()
+       
+        public void Setup(string browser)
         {
-            driver = new ChromeDriver();
+            driver = new DriverClass().CreateDriver(browser);
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("http://demo.guru99.com/test/newtours/register.php");
             guru99Page = new Guru99DropDownSample(driver);
         }
 
-        [Test]
-        public void TestDropdownWithIndex()
+        [Test,TestCaseSource("GetSendMailDataFromCsv")]
+        public void TestDropdownWithIndex(string browser)
         {
+            Setup(browser);
             guru99Page.TestDropdownByIndex();
         }
-        [Test]
-        public void TestDropdownWithValue()
+
+        [Test, TestCaseSource("GetSendMailDataFromCsv")]
+        public void TestDropdownWithValue(string browser)
         {
+            Setup(browser);
             guru99Page.TestDropdownByValue();
         }
 
-        [Test]
-        public void TestDropdownWithText()
+        [Test, TestCaseSource("GetSendMailDataFromCsv")]
+        public void TestDropdownWithText(string browser)
         {
+            Setup(browser);
             guru99Page.TestDropdownByText();
         }
-        [Test]
-        public void TestDropdownValues()
+        
+        [Test, TestCaseSource("GetSendMailDataFromCsv")]
+        public void TestDropdownValues(string browser)
         {
+            Setup(browser);
             List<string> options = guru99Page.GetDropdownValues();
             /*foreach (string s in options)
                 //Console.WriteLine(s);*/
@@ -52,12 +62,25 @@ namespace SeleniumNunitSampleProject.TestMethods
             Console.WriteLine(areEqual);
             Assert.IsTrue(areEqual);
         }
+        
         [TearDown]
         public void Destroy()
         {
             Thread.Sleep(3000);
             driver.Close();
             driver.Quit();
+        }
+
+        //Method to get data from CSV file as integers
+        private static IEnumerable<string[]> GetSendMailDataFromCsv()
+        {
+            CsvReader reader = new CsvReader("Data/dropdowntests.csv");
+            while (reader.Next())
+            {
+                string browser = reader[0];
+                
+                yield return new string[] { browser };
+            }
         }
     }
 }

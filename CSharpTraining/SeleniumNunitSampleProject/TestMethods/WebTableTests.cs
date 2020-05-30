@@ -18,12 +18,18 @@ namespace SeleniumNunitSampleProject.TestMethods
             driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://epds.telangana.gov.in/FoodSecurityAct/?wicket:bookmarkablePage=:nic.fsc.foodsecurity.FscSearch");
             driver.Manage().Window.Maximize();
+            wtsPage = new WebTablesSamplePage(driver);
         }
         [Test]
         public void TestWebtable()
         {
-            wtsPage = new WebTablesSamplePage(driver);
             wtsPage.SearchRationCardAndReadWebTables();
+        }
+
+        [Test]
+        public void TestRCDetailsTable()
+        {
+            wtsPage.SearchRationCardAndValidateTCDetailsTable();
         }
 
         [TearDown]
@@ -33,6 +39,6 @@ namespace SeleniumNunitSampleProject.TestMethods
             driver.Close();
             driver.Quit();
         }
-        
+
     }
 }

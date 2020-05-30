@@ -48,7 +48,7 @@ namespace SeleniumNunitSampleProject.TestMethods
                 //Console.WriteLine(s);*/
             string[] valuesFromFile = File.ReadAllLines("data/CountryDropDownValues.txt");
             string[] valuesFromPage = options.ToArray();
-            bool areEqual= Enumerable.SequenceEqual(valuesFromFile, valuesFromPage);
+            bool areEqual= Enumerable.SequenceEqual(valuesFromFile,valuesFromPage);
             Console.WriteLine(areEqual);
             Assert.IsTrue(areEqual);
         }

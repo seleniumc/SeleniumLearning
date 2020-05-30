@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Testproject.PageObject
+namespace Testproject.Pages
 {
-    class Testmail
+    class HomePage
     {
     }
 }
